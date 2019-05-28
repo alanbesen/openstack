@@ -1,4 +1,40 @@
 {
+  "__inputs": [
+    {
+      "name": "DS_GNOCCHI",
+      "label": "Gnocchi",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "gnocchixyz-gnocchi-datasource",
+      "pluginName": "Gnocchi"
+    }
+  ],
+  "__requires": [
+    {
+      "type": "datasource",
+      "id": "gnocchixyz-gnocchi-datasource",
+      "name": "Gnocchi",
+      "version": "1.7.0"
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "5.4.3"
+    },
+    {
+      "type": "panel",
+      "id": "graph",
+      "name": "Graph",
+      "version": "5.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "singlestat",
+      "name": "Singlestat",
+      "version": "5.0.0"
+    }
+  ],
   "annotations": {
     "list": [
       {
@@ -15,8 +51,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 1,
-  "iteration": 1559041124553,
+  "id": null,
+  "iteration": 1559041124557,
   "links": [],
   "panels": [
     {
@@ -958,7 +994,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Gnocchi",
+      "datasource": "${DS_GNOCCHI}",
       "fill": 1,
       "gridPos": {
         "h": 7,
@@ -1055,7 +1091,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Gnocchi",
+      "datasource": "${DS_GNOCCHI}",
       "fill": 1,
       "gridPos": {
         "h": 7,
@@ -1639,11 +1675,8 @@
       },
       {
         "allValue": null,
-        "current": {
-          "text": "zoneminder",
-          "value": "zoneminder"
-        },
-        "datasource": "Gnocchi",
+        "current": {},
+        "datasource": "${DS_GNOCCHI}",
         "definition": "resources(instance, display_name, project_id=$PROJECT_ID)",
         "hide": 0,
         "includeAll": false,
@@ -1664,11 +1697,8 @@
       },
       {
         "allValue": null,
-        "current": {
-          "text": "4f85e422-795b-4428-ae6f-af8af40ed49b",
-          "value": "4f85e422-795b-4428-ae6f-af8af40ed49b"
-        },
-        "datasource": "Gnocchi",
+        "current": {},
+        "datasource": "${DS_GNOCCHI}",
         "definition": "resources(instance,id,display_name=$ALL_INSTANCE_ID)",
         "hide": 2,
         "includeAll": false,
