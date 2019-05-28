@@ -1,40 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_GNOCCHI",
-      "label": "Gnocchi",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "gnocchixyz-gnocchi-datasource",
-      "pluginName": "Gnocchi"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "datasource",
-      "id": "gnocchixyz-gnocchi-datasource",
-      "name": "Gnocchi",
-      "version": "1.7.0"
-    },
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.4.3"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -51,8 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
-  "iteration": 1558977741585,
+  "id": 1,
+  "iteration": 1559041124553,
   "links": [],
   "panels": [
     {
@@ -91,98 +55,6 @@
         "h": 4,
         "w": 5,
         "x": 0,
-        "y": 1
-      },
-      "id": 25,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "%",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": true
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "aggregator": "mean",
-          "draw_missing_datapoint_as_zero": true,
-          "fill": 0,
-          "granularity": "$GRANULARITY",
-          "groupby": "",
-          "label": "",
-          "metric_name": "cpu_util",
-          "needed_overlap": 0,
-          "operations": "",
-          "queryMode": "resource_search",
-          "ready_metric": false,
-          "reaggregator": "none",
-          "refId": "A",
-          "resource_search": "id=$INSTANCE_ID",
-          "resource_type": "instance"
-        }
-      ],
-      "thresholds": "60,80",
-      "title": "Uso de CPU",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "avg"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorPostfix": false,
-      "colorPrefix": false,
-      "colorValue": true,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 5,
-        "x": 5,
         "y": 1
       },
       "id": 27,
@@ -241,6 +113,98 @@
       ],
       "thresholds": "60,80",
       "title": "Número de vCPUs",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": true,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "format": "mbytes",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 5,
+        "y": 1
+      },
+      "id": 29,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "aggregator": "max",
+          "draw_missing_datapoint_as_zero": false,
+          "fill": 0,
+          "granularity": "$GRANULARITY",
+          "groupby": "",
+          "label": "",
+          "metric_name": "memory.resident",
+          "needed_overlap": 0,
+          "operations": "",
+          "queryMode": "resource_search",
+          "ready_metric": false,
+          "reaggregator": "none",
+          "refId": "A",
+          "resource_search": "id=$INSTANCE_ID",
+          "resource_type": "instance"
+        }
+      ],
+      "thresholds": "60,80",
+      "title": "Total de memória",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -355,7 +319,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "format": "mbytes",
+      "format": "none",
       "gauge": {
         "maxValue": 100,
         "minValue": 0,
@@ -367,6 +331,98 @@
         "h": 4,
         "w": 5,
         "x": 0,
+        "y": 5
+      },
+      "id": 25,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "%",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "aggregator": "mean",
+          "draw_missing_datapoint_as_zero": false,
+          "fill": 0,
+          "granularity": "$GRANULARITY",
+          "groupby": "",
+          "label": "",
+          "metric_name": "cpu_util",
+          "needed_overlap": 0,
+          "operations": "",
+          "queryMode": "resource_search",
+          "ready_metric": false,
+          "reaggregator": "none",
+          "refId": "A",
+          "resource_search": "id=$INSTANCE_ID",
+          "resource_type": "instance"
+        }
+      ],
+      "thresholds": "60,80",
+      "title": "Uso de CPU",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": true,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "format": "mbytes",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 5,
         "y": 5
       },
       "id": 26,
@@ -407,7 +463,7 @@
       "targets": [
         {
           "aggregator": "max",
-          "draw_missing_datapoint_as_zero": true,
+          "draw_missing_datapoint_as_zero": false,
           "fill": 0,
           "granularity": "$GRANULARITY",
           "groupby": "",
@@ -425,98 +481,6 @@
       ],
       "thresholds": "60,90",
       "title": "Uso de Memoria",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "avg"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorPostfix": false,
-      "colorPrefix": false,
-      "colorValue": true,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "format": "mbytes",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 5,
-        "x": 5,
-        "y": 5
-      },
-      "id": 29,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "aggregator": "max",
-          "draw_missing_datapoint_as_zero": true,
-          "fill": 0,
-          "granularity": "$GRANULARITY",
-          "groupby": "",
-          "label": "",
-          "metric_name": "memory.resident",
-          "needed_overlap": 0,
-          "operations": "",
-          "queryMode": "resource_search",
-          "ready_metric": false,
-          "reaggregator": "none",
-          "refId": "A",
-          "resource_search": "id=$INSTANCE_ID",
-          "resource_type": "instance"
-        }
-      ],
-      "thresholds": "60,80",
-      "title": "Total de memória",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -580,7 +544,7 @@
       "targets": [
         {
           "aggregator": "count",
-          "draw_missing_datapoint_as_zero": true,
+          "draw_missing_datapoint_as_zero": false,
           "fill": 0,
           "granularity": "$GRANULARITY",
           "groupby": "",
@@ -597,7 +561,7 @@
         },
         {
           "aggregator": "count",
-          "draw_missing_datapoint_as_zero": true,
+          "draw_missing_datapoint_as_zero": false,
           "fill": 0,
           "granularity": "$GRANULARITY",
           "groupby": "",
@@ -693,7 +657,7 @@
       "targets": [
         {
           "aggregator": "mean",
-          "draw_missing_datapoint_as_zero": true,
+          "draw_missing_datapoint_as_zero": false,
           "fill": 0,
           "granularity": "$GRANULARITY ",
           "groupby": "",
@@ -710,7 +674,7 @@
         },
         {
           "aggregator": "mean",
-          "draw_missing_datapoint_as_zero": true,
+          "draw_missing_datapoint_as_zero": false,
           "fill": 0,
           "granularity": "$GRANULARITY ",
           "groupby": "",
@@ -806,7 +770,7 @@
       "targets": [
         {
           "aggregator": "mean",
-          "draw_missing_datapoint_as_zero": true,
+          "draw_missing_datapoint_as_zero": false,
           "fill": 0,
           "granularity": "$GRANULARITY",
           "groupby": "",
@@ -823,7 +787,7 @@
         },
         {
           "aggregator": "mean",
-          "draw_missing_datapoint_as_zero": true,
+          "draw_missing_datapoint_as_zero": false,
           "fill": 0,
           "granularity": "$GRANULARITY",
           "groupby": "",
@@ -919,7 +883,7 @@
       "targets": [
         {
           "aggregator": "mean",
-          "draw_missing_datapoint_as_zero": true,
+          "draw_missing_datapoint_as_zero": false,
           "fill": 0,
           "granularity": "$GRANULARITY",
           "groupby": "",
@@ -994,7 +958,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_GNOCCHI}",
+      "datasource": "Gnocchi",
       "fill": 1,
       "gridPos": {
         "h": 7,
@@ -1029,7 +993,7 @@
       "targets": [
         {
           "aggregator": "mean",
-          "draw_missing_datapoint_as_zero": true,
+          "draw_missing_datapoint_as_zero": false,
           "fill": 0,
           "granularity": "$GRANULARITY",
           "groupby": "",
@@ -1091,7 +1055,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_GNOCCHI}",
+      "datasource": "Gnocchi",
       "fill": 1,
       "gridPos": {
         "h": 7,
@@ -1126,7 +1090,7 @@
       "targets": [
         {
           "aggregator": "mean",
-          "draw_missing_datapoint_as_zero": true,
+          "draw_missing_datapoint_as_zero": false,
           "fill": 0,
           "granularity": "$GRANULARITY",
           "groupby": "",
@@ -1235,7 +1199,7 @@
       "targets": [
         {
           "aggregator": "mean",
-          "draw_missing_datapoint_as_zero": true,
+          "draw_missing_datapoint_as_zero": false,
           "fill": 0,
           "granularity": "$GRANULARITY",
           "groupby": "",
@@ -1252,7 +1216,7 @@
         },
         {
           "aggregator": "mean",
-          "draw_missing_datapoint_as_zero": true,
+          "draw_missing_datapoint_as_zero": false,
           "fill": 0,
           "granularity": "$GRANULARITY",
           "groupby": "",
@@ -1348,7 +1312,7 @@
       "targets": [
         {
           "aggregator": "mean",
-          "draw_missing_datapoint_as_zero": true,
+          "draw_missing_datapoint_as_zero": false,
           "fill": 0,
           "granularity": "$GRANULARITY",
           "groupby": "",
@@ -1365,7 +1329,7 @@
         },
         {
           "aggregator": "mean",
-          "draw_missing_datapoint_as_zero": true,
+          "draw_missing_datapoint_as_zero": false,
           "fill": 0,
           "granularity": "$GRANULARITY",
           "groupby": "",
@@ -1657,26 +1621,29 @@
     "list": [
       {
         "current": {
-          "text": "ed12efd06fbc45f6af9081db3aefffd3",
-          "value": "ed12efd06fbc45f6af9081db3aefffd3"
+          "text": "3709a47cc4b94503acca44782ed6e268",
+          "value": "3709a47cc4b94503acca44782ed6e268"
         },
         "hide": 0,
         "label": "Projeto",
         "name": "PROJECT_ID",
         "options": [
           {
-            "text": "ed12efd06fbc45f6af9081db3aefffd3",
-            "value": "ed12efd06fbc45f6af9081db3aefffd3"
+            "text": "3709a47cc4b94503acca44782ed6e268",
+            "value": "3709a47cc4b94503acca44782ed6e268"
           }
         ],
-        "query": "ed12efd06fbc45f6af9081db3aefffd3",
+        "query": "3709a47cc4b94503acca44782ed6e268",
         "skipUrlSync": false,
         "type": "textbox"
       },
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS_GNOCCHI}",
+        "current": {
+          "text": "zoneminder",
+          "value": "zoneminder"
+        },
+        "datasource": "Gnocchi",
         "definition": "resources(instance, display_name, project_id=$PROJECT_ID)",
         "hide": 0,
         "includeAll": false,
@@ -1697,8 +1664,11 @@
       },
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS_GNOCCHI}",
+        "current": {
+          "text": "4f85e422-795b-4428-ae6f-af8af40ed49b",
+          "value": "4f85e422-795b-4428-ae6f-af8af40ed49b"
+        },
+        "datasource": "Gnocchi",
         "definition": "resources(instance,id,display_name=$ALL_INSTANCE_ID)",
         "hide": 2,
         "includeAll": false,
@@ -1707,7 +1677,7 @@
         "name": "INSTANCE_ID",
         "options": [],
         "query": "resources(instance,id,display_name=$ALL_INSTANCE_ID)",
-        "refresh": 1,
+        "refresh": 2,
         "regex": "",
         "skipUrlSync": false,
         "sort": 0,
@@ -1784,5 +1754,5 @@
   "timezone": "",
   "title": "Openstack",
   "uid": "yAki16WZz",
-  "version": 79
+  "version": 96
 }
